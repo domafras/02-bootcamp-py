@@ -6,7 +6,6 @@ import math
 # 2. Crie um programa que receba um número do usuário e calcule o resto da divisão desse número por 5.
 # 3. Desenvolva um programa que multiplique dois números fornecidos pelo usuário e mostre o resultado.
 # 4. Faça um programa que peça dois números inteiros e imprima a divisão inteira do primeiro pelo segundo.
-
 # num_1 = int(input("Insira um número inteiro: "))
 # num_2 = int(input("Insira um número inteiro: "))
 # resultado = num_1 // num_2
@@ -21,10 +20,9 @@ import math
 # 8. Desenvolva um programa que calcule a potência de um número (base e expoente fornecidos pelo usuário).
 # 9. Faça um programa que converta a temperatura de Celsius para Fahrenheit.
 # 10. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
-
-raio_circulo = float(input("Digite o raio: "))
-area_circulo = math.pi * raio_circulo ** 2
-print(f'{area_circulo:.2f}')
+# raio_circulo = float(input("Digite o raio: "))
+# area_circulo = math.pi * raio_circulo ** 2
+# print(f'{area_circulo:.2f}')
 
 # #### Strings (`str`)
 
@@ -32,6 +30,14 @@ print(f'{area_circulo:.2f}')
 # 12. Crie um programa que receba o nome completo do usuário e imprima o nome com todas as letras minúsculas.
 # 13. Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.
 # 14. Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.
+
+data_usuario = input("Insira data no formato dd/mm/aaaa: ")
+lista_dia_mes_ano = data_usuario.split("/")
+print(f'O elemento 1 é o: {lista_dia_mes_ano[0]}')
+print(f'O elemento 2 é o: {lista_dia_mes_ano[1]}')
+print(f'O elemento 3 é o: {lista_dia_mes_ano[2]}')
+
+
 # 15. Escreva um programa que concatene duas strings fornecidas pelo usuário.
 
 # #### Booleanos (`bool`)
