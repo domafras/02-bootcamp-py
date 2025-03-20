@@ -117,7 +117,70 @@ print(f"20) Os números {num_1} e {num_2} são diferentes? {diferenca}")
 # #### try-except e if
 
 # 21: Conversor de Temperatura
+try:
+    celsius = float(input("21) Insira a temperatura em Cº: "))
+    fahrenheit = (celsius * 9/5) + 32
+    print(f'{celsius}°C equivale à {fahrenheit}°F.\n')
+except ValueError:
+    print("Por favor, insira um valor válido para temperatura.")
+
 # 22: Verificador de Palíndromo
+texto = input("22) Insira uma palavra ou frase: ")
+if isinstance(texto, str):
+    formatado = texto.replace(" ", "").lower()
+    if formatado == formatado[::-1]:
+        print("É um palíndromo.")
+    else:
+        print("Não é um palíndromo.")
+else:
+    print("Insira um uma palavra ou frase válida.")
+
+
 # 23: Calculadora Simples
+try:
+    print("\n23) Calculadora Simples: ")
+    num1 = float(input("Insira o primeiro número: "))
+    num2 = float(input("Insira o segundo número: "))
+    operador = input("Digite o operador (+ - * /): ")
+    if operador == '+':
+        resultado = num1 + num2
+    elif operador == '-':
+        resultado = num1 - num2
+    elif operador == '*':
+        resultado = num1 * num2
+    elif operador == '/' and num2 != 0:
+        resultado = num1 / num2
+    else:
+        print("Operador inválido ou divisão por zero.")
+    print("Resultado:", resultado)
+except ValueError:
+    print("Erro: Entrada inválida. Certifique-se de inserir números.")
+
 # 24: Classificador de Números
+try:
+    print("\n24) Classificador de Números: ")
+    numero = int(input("Digite um número: "))
+    if numero > 0:
+        print("Positivo")
+    elif numero < 0:
+        print("Negativo")
+    else:
+        print("Zero")
+    if numero % 2 == 0:
+        print("Par")
+    else:
+        print("Ímpar")
+except ValueError:
+    print("Por favor, digite um número inteiro válido.")
+
 # 25: Conversão de Tipo com Validação
+print("\n25) Conversão de Tipo com Validação: ")
+entrada_lista = input("Digite uma lista de números separados por vírgula: ")
+numeros_str = entrada_lista.split(",")
+numeros_int = []
+try:
+    for num in numeros_str:
+        numeros_int.append(int(num.strip()))
+    print("Lista de inteiros:", numeros_int)
+except ValueError:
+    print("Erro: certifique-se de que todos os elementos são números inteiros válidos.")
